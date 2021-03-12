@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    background-color: turquoise;
+}
+
+p {
+    font: 2em sans-serif;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+}
+
+.container {
+    width: 50%;
+}
