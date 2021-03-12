@@ -27,35 +27,35 @@ include($post_text_link); // including post1 text variable
         $wordsArray = explode(" ", $a);  // explodes string by splitter (space)
 
         //creating the excerpt
-        $excerpt = "<p>";
+        $b = "<p>";
         if (count($wordsArray) > 2) {
             foreach ($wordsArray as $key => $word) {
                 if (count($wordsArray) > 2) {
                     if ($key < count($wordsArray) - 2) {
-                        $excerpt .= $word . " ";
+                        $b .= $word . " ";
                     } elseif ($key == count($wordsArray) - 2) {
-                        $excerpt .= "<a href='$post_link'>";
-                        $excerpt .= $wordsArray[count($wordsArray) - 2] . " ";
+                        $b .= "<a href='$post_link'>";
+                        $b .= $wordsArray[count($wordsArray) - 2] . " ";
                     } elseif ($key == count($wordsArray) - 1) {
-                        $excerpt .= $wordsArray[count($wordsArray) - 1];
-                        $excerpt .= "</a>";
+                        $b .= $wordsArray[count($wordsArray) - 1];
+                        $b .= "</a>";
                     }
                 }
             }
         } else {
-            $excerpt .= "<a href='$post_link'>";
+            $b .= "<a href='$post_link'>";
             foreach ($wordsArray as $key => $word) {
                 if ($key == count($wordsArray) - 1) {
-                    $excerpt .= $word;
+                    $b .= $word;
                     continue;
                 }
-                $excerpt .= $word . " ";
+                $b .= $word . " ";
             }
-            $excerpt .= "</a>";
+            $b .= "</a>";
         }
-        $excerpt .= "</p>";
+        $b .= "</p>";
 
-        echo $excerpt; // outputs the excerpt
+        echo $b; // outputs the excerpt
 
         ?>
 
